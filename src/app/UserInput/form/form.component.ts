@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Observable, catchError, of } from 'rxjs';
 import { Response } from 'src/app/Response';
-import { freeApiService } from 'src/app/Service/freeapi.service';
 import { UserForm } from 'src/app/UserForm';
 
 @Component({

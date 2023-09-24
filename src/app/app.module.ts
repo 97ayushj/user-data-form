@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { FormComponent } from './UserInput/form/form.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule } from '@angular/common/http'
-import { freeApiService } from './Service/freeapi.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +18,7 @@ import { freeApiService } from './Service/freeapi.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [freeApiService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
