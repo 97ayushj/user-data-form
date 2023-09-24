@@ -3,16 +3,23 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormComponent } from './UserInput/form/form.component';
+import { FormsModule } from '@angular/forms';
+import {HttpClientModule } from '@angular/common/http'
+import { freeApiService } from './Service/freeapi.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [freeApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

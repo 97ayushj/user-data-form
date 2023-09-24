@@ -1,0 +1,64 @@
+<div class ="container-fluid"><h2>User Form</h2></div>
+<form (ngSubmit) ="onSubmit()" #form="ngForm" >
+  <div class ="container-fluid">
+    <div class="mb-3">
+        <label for="firstName" class="form-label">First Name*:</label>
+        <input
+        class="form-control"
+          type="text"
+          id="firstName"
+          name="firstName"
+          [(ngModel)]="firstName"
+          required
+          minlength="2"
+          maxlength="25"
+        />
+        <div class="form-text">First Name must be >= 2 chars and =< 25 chars</div>
+      </div>
+      <div class="mb-3">
+        <label for="lastName" class="form-label">Last Name*:</label>
+        <input
+        class="form-control"
+          type="text"
+          id="lastName"
+          name="lastName"
+          [(ngModel)]="lastName"
+          required
+          minlength="2"
+          maxlength="25"
+        />
+        <div class="form-text">Last Name must be >= 2 chars and =< 25 chars</div>
+      </div>
+      <div class="mb-3">
+        <label for="gender" class="form-label">Gender*:</label>
+        <input
+        class="form-control"
+          type="text"
+          id="gender"
+          name="gender"
+          [(ngModel)]="gender"
+          required
+          minlength="2"
+          maxlength="25"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="comment" class="form-label">Comment*:</label>
+        <input
+        class="form-control"
+          type="text"
+          id="comment"
+          name="comment"
+          [(ngModel)]="comment"
+          required
+          maxlength="25"
+        />
+        <div class="form-text">Comment must be =< 25 chars </div>
+      </div>
+
+      <button type="submit" class="btn btn-sm btn-primary" [disabled]="form.invalid">Submit</button>
+    </div>
+      <div class="container-fluid">{{response?.status}} </div>
+      <div class="container-fluid">{{response?.message}}</div>
+  </form>
+
